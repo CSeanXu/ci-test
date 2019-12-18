@@ -1,0 +1,18 @@
+workspace:
+  base: /src
+
+clone:
+  git:
+    image: plugins/git:1
+    depth: 50
+    tags: true
+
+pipeline:
+
+  notification:
+    image: lddsb/drone-dingtalk-message
+    settings:
+      token: b276a02939c1beb9b8adef78753604e4c1ea68b4d2fed28139679ccfc4471ab5
+      type: markdown
+      message_pic: true
+      sha_link: true
